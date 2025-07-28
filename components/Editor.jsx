@@ -13,10 +13,12 @@ export default function Editor({ currentNote, updateNote }) {
         tasklists: true,
     })
 
+    if (!currentNote) return <div className="no-note-selected">No note selected</div>;
+
     return (
         <section className="pane editor">
             <ReactMde
-                value={currentNote?.body}
+                value={currentNote.body}
                 onChange={updateNote}
                 selectedTab={selectedTab}
                 onTabChange={setSelectedTab}
