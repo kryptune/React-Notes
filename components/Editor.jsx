@@ -12,8 +12,6 @@ export default function Editor({ tempNoteText, setTempNoteText }) {
         tasklists: true,
     })
 
-    if (!currentNote) return <div className="no-note-selected">No note selected</div>;
-
     return (
         <section className="pane editor">
             <ReactMde
