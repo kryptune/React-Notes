@@ -32,7 +32,7 @@ export default function App() {
 
         return unsubscribe
     }, [])
-    
+    console.log(currentNote)
     React.useEffect(() => {
         if (!currentNoteId) {
             setCurrentNoteId(notes[0]?.id)
